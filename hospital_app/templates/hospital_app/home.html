@@ -1,0 +1,433 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="{% static 'hospital_app/style.css' %}" />
+    <title>Christ Group of Hospitals</title>
+  </head>
+  <body>
+    <nav class="nav__bar">
+      <div class="logo">
+        <span class="material-symbols-outlined"> heart_plus </span>
+        <h2>Christ Group Of Hospitals</h2>
+      </div>
+      <ul class="navbar">
+        <li><a href="{% url 'home' %}#Home">Home</a></li>
+        <li><a href="{% url 'home' %}#Service">Service</a></li>
+        <li><a href="{% url 'home' %}#About">About</a></li>
+        <li><a href="{% url 'home' %}#Doctor">Doctor</a></li>
+        <li><a href="{% url 'home' %}#Book">Book</a></li>
+        <li><a href="{% url 'home' %}#Contact">Contact</a></li>
+      </ul>
+      <div id="menu__btn" class="fas fa-bars"></div>
+    </nav>
+    <hr />
+    <section id="Home">
+      <div class="home">
+        <div class="home__first">
+          <h2>Stay Safe, Stay Healthy</h2>
+          <p>
+            At Christ Group of Hospitals, we are committed to providing
+            world-class healthcare services with cutting-edge technology and
+            experienced medical professionals. Our mission is to ensure the
+            well-being of every patient through compassionate care and
+            innovative medical solutions.
+          </p>
+          <button type="button">Contact Now</button>
+        </div>
+        <div class="home__second">
+          <img src="{% static 'hospital_app/image/home.gif' %}" alt="Home Image" />
+        </div>
+      </div>
+    </section>
+    <section id="Service">
+      <div class="about__top">
+        <h2><span>Our</span> Services</h2>
+      </div>
+      <div class="service">
+        <div class="service__first">
+          <i class="fa-solid fa-user-doctor"></i>
+          <h2>140+</h2>
+          <p>Doctors at work</p>
+        </div>
+        <div class="service__second">
+          <i class="fas fa-user"></i>
+          <h2>2400+</h2>
+          <p>Happy Patients</p>
+        </div>
+        <div class="service__third">
+          <i class="fa-solid fa-bed-pulse"></i>
+          <h2>250+</h2>
+          <p>Bed Facility</p>
+        </div>
+        <div class="service__fourth">
+          <i class="fas fa-hospital"></i>
+          <h2>12</h2>
+          <p>Hospitals Available</p>
+        </div>
+      </div>
+    </section>
+    <div class="about__page">
+      <div class="about__one">
+        <i class="fas fa-notes-medical"></i>
+        <h2>Free Checkup</h2>
+        <p>
+          We offer free health checkups to help you stay on top of your
+          wellness. Regular health screenings can help in early detection of
+          diseases and ensure better health outcomes.
+        </p>
+        <button type="button" onclick="location.href='{% url 'free_checkup' %}'">Learn More</button>
+      </div>
+      <div class="about__two">
+        <i class="fas fa-ambulance"></i>
+        <h2>24/7 Ambulance</h2>
+        <p>
+          Our ambulance services are available 24/7 to provide emergency medical
+          care to patients in need.
+        </p>
+        <button type="button" onclick="location.href='{% url 'ambulance_service' %}'">Learn More</button>
+      </div>
+      <div class="about__three">
+        <i class="fas fa-user-md"></i>
+        <h2>Experts Consultancy</h2>
+        <p>
+          Consult with our experienced doctors for expert medical advice and
+          treatment plans tailored to your health needs.
+        </p>
+        <button type="button" onclick="location.href='{% url 'experts_consultancy' %}'">Learn More</button>
+      </div>
+      <div class="about__four">
+        <i class="fas fa-pills"></i>
+        <h2>Pharmacy & Medicines</h2>
+        <p>
+          We provide a full range of medicines and healthcare products through
+          our well-stocked pharmacy, ensuring easy access to essential
+          medications.
+        </p>
+        <button type="button" onclick="location.href='{% url 'pharmacy_medicine' %}'">Learn More</button>
+      </div>
+      <div class="about__five">
+        <i class="fas fa-procedures"></i>
+        <h2>Advanced Bed Facilities</h2>
+        <p>
+          Our hospitals are equipped with state-of-the-art bed facilities,
+          ensuring comfort and care for every patient.
+        </p>
+        <button type="button" onclick="location.href='{% url 'advanced_bed_facilities' %}'">Learn More</button>
+      </div>
+      <div class="about__six">
+        <i class="fas fa-heartbeat"></i>
+        <h2>Comprehensive Care</h2>
+        <p>
+          From diagnosis to treatment, our hospitals provide complete healthcare
+          solutions under one roof.
+        </p>
+        <button type="button" onclick="location.href='{% url 'comprehensive_care' %}'">Learn More</button>
+      </div>
+      <div class="about__six">
+        <i class="fa-solid fa-tooth"></i>
+        <h2>Dental Care</h2>
+        <p>
+          Our specialized dental care services include routine checkups, oral
+          surgeries, and cosmetic dentistry to maintain your oral health.
+        </p>
+        <button type="button"onclick="location.href='{% url 'dental_care' %}'">Learn More</button>
+      </div>
+      <div class="about__six">
+        <i class="fa-solid fa-spa"></i>
+        <h2>Physiotherapy</h2>
+        <p>
+          Physiotherapy services are available to help patients recover from
+          injuries, manage chronic pain, and improve mobility.
+        </p>
+        <button type="button" onclick="location.href='{% url 'physiotherapy' %}'">Learn More</button>
+      </div>
+      <div class="about__six">
+        <i class="fa-solid fa-suitcase-medical"></i>
+        <h2>Cardiology</h2>
+        <p>
+          Our expert cardiologists provide diagnostic and treatment services for
+          various heart-related conditions, ensuring optimal heart health.
+        </p>
+        <button type="button" onclick="location.href='{% url 'cardiology' %}'">Learn More</button>
+      </div>
+    </div>
+    </div>
+    <section id="About">
+      <div class="about__top">
+        <h2><span>About</span> Us</h2>
+      </div>
+      <div class="about">
+        <div class="about__first">
+          <img src="{% static 'hospital_app/image/about.png' %}" alt="About Image" />
+        </div>
+        <div class="about__second">
+          <h2>We take care of your healthy life.</h2>
+          <p>
+            At Christ Group of Hospitals, we are dedicated to improving
+            healthcare outcomes through patient-centered treatment, modern
+            technology, and a highly skilled medical team. With multiple
+            hospital branches, we aim to bring quality healthcare services
+            closer to you.
+          </p>
+          <p>
+            Our mission is to create a healthier community by ensuring that
+            every patient receives personalized care, timely diagnosis, and
+            effective treatment. We are committed to providing comprehensive
+            healthcare solutions that cater to the diverse needs of our
+            patients.
+          </p>
+          <button type="button">Learn More</button>
+        </div>
+      </div>
+    </section>
+    <section id="Doctor">
+      <div class="doctor__title">
+        <h2>Our <span>Doctors</span></h2>
+      </div>
+      <div class="doctor">
+        <div class="doctor__one">
+          <img src="{% static 'hospital_app/image/doctor-1.png' %}" alt="Doctor Image" />
+          <h2>Dr. Dalwin</h2>
+          <p>Dermatologist</p>
+          <div class="media__icon">
+            <i class="fa-solid fa-phone"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+          </div>
+        </div>
+        <div class="doctor__two">
+          <img src="{% static 'hospital_app/image/doctor-2.png' %}" alt="Doctor Image" />
+          <h2>Dr. John</h2>
+          <p>Cardiologist</p>
+          <div class="media__icon">
+            <i class="fa-solid fa-phone"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+          </div>
+        </div>
+        <div class="doctor__three">
+          <img src="{% static 'hospital_app/image/doctor-3.png' %}" alt="Doctor Image" />
+          <h2>Dr. Amanda</h2>
+          <p>Oncologist</p>
+          <div class="media__icon">
+            <i class="fa-solid fa-phone"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+          </div>
+        </div>
+        <div class="doctor__four">
+          <img src="{% static 'hospital_app/image/doctor-4.png' %}" alt="Doctor Image" />
+          <h2>Dr. Gorge</h2>
+          <p>Pediatricians</p>
+          <div class="media__icon">
+            <i class="fa-solid fa-phone"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+          </div>
+        </div>
+        <div class="doctor__five">
+          <img src="{% static 'hospital_app/image/doctor-5.png' %}" alt="Doctor Image" />
+          <h2>Dr. Anna</h2>
+          <p>General surgery</p>
+          <div class="media__icon">
+            <i class="fa-solid fa-phone"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+          </div>
+        </div>
+        <div class="doctor__six">
+          <img src="{% static 'hospital_app/image/doctor-6.png' %}" alt="Doctor Image" />
+          <h2>Dr.Frank</h2>
+          <p>Hematologist</p>
+          <div class="media__icon">
+            <i class="fa-solid fa-phone"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Book">
+      <div class="book__title">
+        <h2><span>Book</span> Now</h2>
+      </div>
+      <div class="book">
+        <div class="book__first">
+          <img src="{% static 'hospital_app/image/book-now.png' %}" alt="Book Now Image" />
+        </div>
+        <div class="book__second">
+          <h2>Book an Appointment!</h2>
+          <form method="post" action="{% url 'book_appointment' %}">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="text" name="phone_number" placeholder="Number" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <input type="date" name="appointment_date" required />
+            <button type="submit">Book Now</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <section id="Contact">
+        <div class="bottom">
+          <div class="bottom__one">
+            <h2>Quick Links</h2>
+            <ul>
+              <li>
+                <a href="{% url 'home' %}#Home"
+                  ><i class="fas fa-chevron-right"></i><span> Home</span></a
+                >
+              </li>
+              <li>
+                <a href="{% url 'home' %}#Service"
+                  ><i class="fas fa-chevron-right"></i><span> Service</span></a
+                >
+              </li>
+              <li>
+                <a href="{% url 'home' %}#About"
+                  ><i class="fas fa-chevron-right"></i><span> About</span></a
+                >
+              </li>
+              <li>
+                <a href="{% url 'home' %}#Doctor"
+                  ><i class="fas fa-chevron-right"></i><span> Doctor</span></a
+                >
+              </li>
+              <li>
+                <a href="{% url 'home' %}#Book"
+                  ><i class="fas fa-chevron-right"></i><span> Book</span></a
+                >
+              </li>
+              <li>
+                <a href="{% url 'home' %}#Contact"
+                  ><i class="fas fa-chevron-right"></i><span> Contact</span></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="bottom__two">
+            <h2>Our Service</h2>
+            <ul>
+              <li>
+                <a href="{% url 'dental_care' %}"
+                  ><i class="fas fa-chevron-right"></i
+                  ><span> Dental Care</span></a
+                >
+              </li>
+              <li>
+                <a href="{% url 'massage_therapy' %}"
+                  ><i class="fas fa-chevron-right"></i
+                  ><span> Massage Therapy</span></a
+                >
+              </li>
+              <li>
+                <a href="{% url 'cardiology' %}"
+                  ><i class="fas fa-chevron-right"></i
+                  ><span> Cardiology</span></a
+                >
+              </li>
+              <li>
+                <a href="{% url 'diagnosis' %}"
+                  ><i class="fas fa-chevron-right"></i
+                  ><span> Diagnosis</span></a
+                >
+              </li>
+              <li>
+                <a href="{% url 'ambulance_service' %}"
+                  ><i class="fas fa-chevron-right"></i
+                  ><span> Ambulance Service</span></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="bottom__three">
+            <h2>Contact Information</h2>
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fa-solid fa-phone"></i
+                  ><span> +123-456-7890</span></a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-solid fa-phone"></i
+                  ><span> +987-654-3210</span></a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-solid fa-envelope"></i
+                  ><span> example@gmail.com</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-location-crosshairs"></i
+                  ><span> Koramangala, Bengaluru</span></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="bottom__four">
+            <h2>Follow Us</h2>
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-facebook"></i><span> Facebook</span></a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-linkedin-in"></i
+                  ><span> Linkdin</span></a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-x-twitter"></i><span> Twitter</span></a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i
+                  ><span> Instagram</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-brands fa-telegram"></i
+                  ><span> Telegram</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p>developed by vishal junak das.</p>
+      </section>
+    </footer>
+    <script src="{% static 'hospital_app/script.js' %}"></script>
+  </body>
+</html>

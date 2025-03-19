@@ -1,0 +1,231 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="{% static 'hospital_app/style.css' %}" />
+    <title>Advanced Bed Facilities - Christ Group of Hospitals</title>
+  </head>
+  <body>
+    <nav class="nav__bar">
+      <div class="logo">
+        <span class="material-symbols-outlined"> heart_plus </span>
+        <h2>Christ Group Of Hospitals</h2>
+      </div>
+      <ul class="navbar">
+        <li><a href="{% url 'home' %}#Home">Home</a></li>
+        <li><a href="{% url 'home' %}#Service">Service</a></li>
+        <li><a href="{% url 'home' %}#About">About</a></li>
+        <li><a href="{% url 'home' %}#Doctor">Doctor</a></li>
+        <li><a href="{% url 'home' %}#Book">Book</a></li>
+        <li><a href="{% url 'home' %}#Contact">Contact</a></li>
+      </ul>
+      <div id="menu__btn" class="fas fa-bars"></div>
+    </nav>
+    <hr />
+    <section id="AdvancedBedFacilities">
+      <div class="home">
+        <div class="home__first">
+          <h2>Advanced Bed Facilities</h2>
+          <p>
+            Our hospitals are equipped with state-of-the-art bed facilities, ensuring comfort and care for every patient. We offer a range of advanced bed options to cater to different medical needs.
+          </p>
+          <button type="button">Contact Now</button>
+        </div>
+        <div class="home__second">
+          <img src="{% static 'hospital_app/image/advanced-bed-facilities.png' %}" alt="Advanced Bed Facilities" />
+        </div>
+      </div>
+    </section>
+    <section id="BedFacilities">
+      <div class="bed-facilities__title">
+        <h2><span>Our</span> Bed Facilities</h2>
+      </div>
+      <div class="bed-facilities">
+        <div class="bed-facility__box">
+          <h3>ICU Beds</h3>
+          <p>
+            Our Intensive Care Unit (ICU) beds are equipped with advanced monitoring systems and life-support equipment to provide critical care to patients.
+          </p>
+        </div>
+        <div class="bed-facility__box">
+          <h3>General Ward Beds</h3>
+          <p>
+            Our general ward beds offer a comfortable and safe environment for patients recovering from surgery or illness.
+          </p>
+        </div>
+        <div class="bed-facility__box">
+          <h3>Private Room Beds</h3>
+          <p>
+            Our private room beds provide a quiet and private space for patients who require a more personalized care experience.
+          </p>
+        </div>
+        <div class="bed-facility__box">
+          <h3>Maternity Beds</h3>
+          <p>
+            Our maternity beds are designed to provide comfort and support to expectant mothers during labor and delivery.
+          </p>
+        </div>
+        <div class="bed-facility__box">
+          <h3>Pediatric Beds</h3>
+          <p>
+            Our pediatric beds are specially designed to cater to the needs of our youngest patients, ensuring their comfort and safety.
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <section id="Contact">
+        <div class="bottom">
+          <div class="bottom__one">
+            <h2>Quick Links</h2>
+            <ul>
+              <li>
+                <a href="{% url 'home' %}#Home"
+                  ><i class="fas fa-chevron-right"></i><span> Home</span></a
+                >
+              </li>
+              <li>
+                <a href="{% url 'home' %}#Service"
+                  ><i class="fas fa-chevron-right"></i><span> Service</span></a
+                >
+              </li>
+              <li>
+                <a href="{% url 'home' %}#About"
+                  ><i class="fas fa-chevron-right"></i><span> About</span></a
+                >
+              </li>
+              <li>
+                <a href="{% url 'home' %}#Doctor"
+                  ><i class="fas fa-chevron-right"></i><span> Doctor</span></a
+                >
+              </li>
+              <li>
+                <a href="{% url 'home' %}#Book"
+                  ><i class="fas fa-chevron-right"></i><span> Book</span></a
+                >
+              </li>
+              <li>
+                <a href="{% url 'home' %}#Contact"
+                  ><i class="fas fa-chevron-right"></i><span> Contact</span></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="bottom__two">
+            <h2>Our Service</h2>
+            <ul>
+              <li>
+                <a href="{% url 'dental_care' %}"
+                  ><i class="fas fa-chevron-right"></i
+                  ><span> Dental Care</span></a
+                >
+              </li>
+              <li>
+                <a href="{% url 'massage_therapy' %}"
+                  ><i class="fas fa-chevron-right"></i
+                  ><span> Massage Therapy</span></a
+                >
+              </li>
+              <li>
+                <a href="{% url 'cardiology' %}"
+                  ><i class="fas fa-chevron-right"></i
+                  ><span> Cardiology</span></a
+                >
+              </li>
+              <li>
+                <a href="{% url 'diagnosis' %}"
+                  ><i class="fas fa-chevron-right"></i
+                  ><span> Diagnosis</span></a
+                >
+              </li>
+              <li>
+                <a href="{% url 'ambulance_service' %}"
+                  ><i class="fas fa-chevron-right"></i
+                  ><span> Ambulance Service</span></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="bottom__three">
+            <h2>Contact Information</h2>
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fa-solid fa-phone"></i
+                  ><span> +123-456-7890</span></a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-solid fa-phone"></i
+                  ><span> +987-654-3210</span></a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-solid fa-envelope"></i
+                  ><span> example@gmail.com</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-location-crosshairs"></i
+                  ><span> Koramangala, Bengaluru</span></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="bottom__four">
+            <h2>Follow Us</h2>
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-facebook"></i><span> Facebook</span></a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-linkedin-in"></i
+                  ><span> Linkdin</span></a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-x-twitter"></i><span> Twitter</span></a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i
+                  ><span> Instagram</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-brands fa-telegram"></i
+                  ><span> Telegram</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p>developed by vishal junak das.</p>
+      </section>
+    </footer>
+    <script src="{% static 'hospital_app/script.js' %}"></script>
+  </body>
+</html>
